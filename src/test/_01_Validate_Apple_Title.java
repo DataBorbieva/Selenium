@@ -2,6 +2,7 @@ package test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,14 +11,7 @@ public class _01_Validate_Apple_Title {
     public static void main(String[] args) throws InterruptedException {
 
 //1.Set up driver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\datab\\IdeaProjects\\selenium_intro\\chromedriver_win32\\chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-
-
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        WebDriver driver = Driver.getDriver();
 
 
         //2.validation
@@ -35,9 +29,7 @@ public class _01_Validate_Apple_Title {
 
 
         // quit driver
-        Thread.sleep(3000);
-        driver.quit();
-
+        Driver.quitDriver();
         System.out.println("End of the program");
 
     }
