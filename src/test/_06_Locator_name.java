@@ -9,9 +9,8 @@ public class _06_Locator_name {
     public static void main(String[] args) {
         WebDriver driver = Driver.getDriver();
         driver.get("https://www.google.com");
-        WebElement name = driver.findElement(By.name("q"));
-        if(name.isDisplayed()) System.out.println("The name validation PASSED");
-        else System.out.println("Name validation FAILED!!!");
+        if(driver.findElement(By.name("q")).isDisplayed()) System.out.println("The input box validation PASSED");
+        else System.out.println("Input box validation FAILED!!!");
         Driver.quitDriver();
 
     }
