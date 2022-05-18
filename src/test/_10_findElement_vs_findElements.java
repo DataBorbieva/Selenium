@@ -16,7 +16,7 @@ public class _10_findElement_vs_findElements {
          */
 
         WebDriver driver = Driver.getDriver();
-        driver.get("https://www.google.com");
+        driver.get("https://www.google.com/");
 
         List<WebElement> googleNavLinks = driver.findElements(By.xpath("//div[@class='o3j99 n1xJcf Ne6nSd']//a"));
 
